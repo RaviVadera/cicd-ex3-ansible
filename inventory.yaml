@@ -1,0 +1,16 @@
+# Group of hosts
+dockercontainers:
+  hosts:
+    node1:
+      # IP address for first container
+      ansible_host: 172.17.0.3
+      # Automatically trust fingerprint for new SSH hosts
+      ansible_ssh_extra_args: '-o StrictHostKeyChecking=accept-new'
+    # node2:
+    # # IP address for second container
+    #   ansible_host: 172.17.0.4
+    # # Automatically trust fingerprint for new SSH hosts
+    #   ansible_ssh_extra_args: '-o StrictHostKeyChecking=accept-new'
+  vars:
+    # Configure the username when connecting with SSH
+    ansible_user: ssluser
